@@ -14,16 +14,7 @@ const Banner=()=>{
     const classes = useStyles();
     return(
         <Box className={classes.image}>
-            <Typography>Blog</Typography>
-            <Typography> So</Typography>
-            <Typography>Blog</Typography>
-            <Typography> So</Typography>
-            <Typography>Blog</Typography>
-            <Typography> So</Typography>
-            <Typography>Blog</Typography>
-            <Typography> So</Typography>
-            <Typography>Blog</Typography>
-            <Typography> So</Typography>
+            
         </Box>
     )
 }
