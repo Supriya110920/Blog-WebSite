@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin:10
   },
   media: {
     height: 140,
@@ -33,6 +34,9 @@ export default function MediaCard() {
           <Typography gutterBottom variant="h5" component="h2">
             Biriyani
           </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Cuisine
+          </Typography>
           <Typography>
             User Name
           </Typography>
@@ -41,14 +45,14 @@ export default function MediaCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

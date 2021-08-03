@@ -1,5 +1,6 @@
 
 import {AppBar,Toolbar, Typography,makeStyles} from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     component:{
@@ -22,7 +23,7 @@ const Header = ()=>{
     return(
         <AppBar className={classes.component}>
        <Toolbar className={classes.container}>
-          <Typography>Home</Typography>
+          <Link to={'/'} style={{textDecoration: 'none', color:'inherit'}}><Typography>Home</Typography></Link>
           <Typography>About Us</Typography>
           <Typography>Contact</Typography>
           <Typography>Login</Typography>

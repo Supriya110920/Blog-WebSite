@@ -1,6 +1,7 @@
 import { Button, TableCell, TableHead , Table, TableBody, TableRow } from  "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import {categories} from '../constants/data'
+import {categories} from '../constants/data';
+import {Link} from 'react-router-dom';
 const useStyles=makeStyles({
     create:{
         margin:20,
@@ -18,6 +19,10 @@ const useStyles=makeStyles({
         textAlign: 'center',
         fontWeight:'bold',
         fontSize:'120%'
+    },
+    link:{
+        textDecoration:'none',
+        color:'inherit',
     }
 })
 
@@ -26,7 +31,7 @@ const Categories =() =>{
     const classes=useStyles();
     return (
        <>
-        <Button variant="contained" color="primary" className={classes.create}> Add Reciepy </Button>
+        <Link to={'/create'} className={classes.link}><Button variant="contained" color="primary" className={classes.create}> Add Reciepy </Button></Link>
 
         <Table className={classes.table}>
             <TableHead>

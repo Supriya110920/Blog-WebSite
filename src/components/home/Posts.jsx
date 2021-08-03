@@ -1,42 +1,27 @@
  
 import MediaCard from './MediaCard';
-import { Box, makeStyles,Grid } from '@material-ui/core';
+import { makeStyles,Grid } from '@material-ui/core';
+import {Link} from 'react-router-dom'
 const useStyles= makeStyles({
     container:{
-        margin:10
+        
     }
 })
 
 const Posts =()=>{
-    const classes = useStyles();
-
-
-
+    //const classes = useStyles();
+    const posts = [1,2,3,4,5,6,7,8,9,10];
     return (
-        <>
-        <Grid  className={classes.container}>
-            <MediaCard/>                   
-        </Grid>
-        <Grid  className={classes.container}>
-            <MediaCard/>                   
-        </Grid>
-        <Grid  className={classes.container}>
-            <MediaCard/>                   
-        </Grid>
-        <Grid  className={classes.container}>
-            <MediaCard/>                   
-        </Grid>
-        <Grid  className={classes.container}>
-            <MediaCard/>                   
-        </Grid>
-        <Grid  className={classes.container}>
-            <MediaCard/>                   
-        </Grid>
         
-        
-        {/* <p>Hello posts            
-        </p> */}
-        </>
+        posts.map(post => (
+            <Grid  item lg={3}  md={4} sm={4} xs={12}>
+            <Link to={'/details'} style={{textDecoration: 'none'}}>            
+            <MediaCard/> 
+            </Link>
+            </Grid>
+                        
+        ))     
+            
     )
 }
 export default Posts;
