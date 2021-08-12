@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard({post}) {
   const classes = useStyles();
   //const url='https://img.buzzfeed.com/buzzfeed-static/static/2013-11/enhanced/webdr03/18/17/enhanced-buzz-22126-1384812593-32.jpg';
 
@@ -32,16 +32,16 @@ export default function MediaCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Biriyani
+            {post.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Cuisine
+            {post.category}
           </Typography>
           <Typography>
-            User Name
+            Author:{post.username}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            details....
+            {post.description}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -1,6 +1,6 @@
 import { Button, TableCell, TableHead , Table, TableBody, TableRow } from  "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import {categories} from '../constants/data';
+import {categories} from '../../constants/data';
 import {Link} from 'react-router-dom';
 const useStyles=makeStyles({
     create:{
